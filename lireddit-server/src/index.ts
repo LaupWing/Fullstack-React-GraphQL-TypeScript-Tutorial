@@ -10,7 +10,7 @@ const main = async () =>{
     await orm.getMigrator().up();
 
     const app = express();
-    app.get('/', (req,res)=>{
+    app.get('/', (_,res)=>{
         res.send('Hello World')
     })
     app.listen(4000, ()=>console.log(`Server listening on port 4000`))
